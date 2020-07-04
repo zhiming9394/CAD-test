@@ -4,7 +4,9 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build-python": "pyinstaller index.py --clean --distpath ./pydist",
+    "pack-app": "./node_modules/.bin/electron-packager . --overwrite --ignore=py$"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +19,10 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^9.0.4"
+    "electron": "^9.0.4",
+    "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "regedit": "^3.0.3"
   }
 }
